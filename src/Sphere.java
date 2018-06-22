@@ -1,14 +1,18 @@
 
 public class Sphere 
 {
-	double x, y, z;
+	Point3D center;
 	double radius;
 	public Sphere()
 	{
-		x = 0; y = 0; z = 0;
+		center = new Point3D(0,0,0);
 		radius = 15.0;
 	}
 	
+	public boolean contains(Point3D point)
+	{
+		return point.getDist(center) < radius;
+	}
 	
 	public double getRadius() {return radius;}
 }
