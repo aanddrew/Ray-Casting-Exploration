@@ -8,4 +8,7 @@ public class Sphere
 		x = 0; y = 0; z = 0;
 		radius = 15.0;
 	}
+	
+	
+	public double getRadius() {return radius;}
 }
