@@ -9,4 +9,4 @@ This algorithm was not copied from anywhere nor should you use it, it's probably
 
 Here's a sphere I rendered with it:
 
-![What is this](render_1.png)
+![Sphere](render_1.png)
