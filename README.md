@@ -9,4 +9,4 @@ This algorithm was not copied from anywhere nor should you use it, it's probably
 
 Here's a sphere I rendered with it:
 
-![What is this](render_1.png)
+![Screenshot](https://user-images.githubusercontent.com/38194149/41802702-99eebdd6-7637-11e8-923b-2dfc97e26580.png)
