@@ -9,4 +9,8 @@ This algorithm was not copied from anywhere nor should you use it, it's probably
 
 Here's a sphere I rendered with it:
 
+<<<<<<< HEAD
 ![Sphere](render_1.png)
+=======
+![Screenshot](https://user-images.githubusercontent.com/38194149/41802702-99eebdd6-7637-11e8-923b-2dfc97e26580.png)
+>>>>>>> 2f39f427194f13d002cbd00ba41e90daff69ce61
