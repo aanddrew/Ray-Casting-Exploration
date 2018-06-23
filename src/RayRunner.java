@@ -11,7 +11,7 @@ public class RayRunner
 		
 		frame.setVisible(true);
 		
-		Camera cam = new Camera(frame, new Sphere(), new Light(new Point3D(0,-50,0)));
+		Camera cam = new Camera(frame, new Sphere(), new Light(new Point3D(-20,50,-50)));
 		frame.add(cam);
 		
 		cam.renderSphere();

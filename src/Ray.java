@@ -3,7 +3,7 @@ import java.awt.Point;
 public class Ray 
 {
 	public static final double RAY_LENGTH = 100;
-	public static final double RAY_INCREMENT= 2;
+	public static final double RAY_INCREMENT= 1;
 	
 	private double yAngle;
 	private double vertAngle;
@@ -33,11 +33,15 @@ public class Ray
 		
 		active = false;
 		
+		double xCoef = Math.cos(yAngle);
+		double yCoef = Math.sin(vertAngle);
+		double zCoef = Math.sin(yAngle);
+		
 		for (int i = 0; i < points.length; i++)
 		{
-			points[i] = new Point3D(camera.getPoint3D().getX() + Math.cos(yAngle)*i*RAY_INCREMENT, 
-									camera.getPoint3D().getY() + Math.sin(vertAngle)*i*RAY_INCREMENT,
-									camera.getPoint3D().getZ() + Math.sin(yAngle)*i*RAY_INCREMENT);
+			points[i] = new Point3D(camera.getPoint3D().getX() + xCoef*i*RAY_INCREMENT, 
+									camera.getPoint3D().getY() + yCoef*i*RAY_INCREMENT,
+									camera.getPoint3D().getZ() + zCoef*i*RAY_INCREMENT);
 			System.out.print(screenLocIn.getX() + ", " + screenLocIn.getY() + ", " + i + "/" + points.length + ", ");
 			if (sphere.contains(points[i]) && !active)
 			{
@@ -53,7 +57,9 @@ public class Ray
 	{
 
 		if (active) {
-			double alpha = lightPoint.getDist(light.getPoint()) *3;
+			double alpha = 255-Math.pow(lightPoint.getDist(light.getPoint()),2) * 0.0550;
+			if (alpha > 255) alpha = 255;
+			else if (alpha < 0) alpha = 0;
 			System.out.println(alpha);
 			return (int) (alpha);
 		}
